@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SoftStore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Soft<span>Store</span></a>
+            <div class="nav-menu">
+                <a href="/">Início</a>
+                <a href="dashboard.html" class="active">Minha Conta</a>
+                <a href="#" id="adminLink" style="display: none;">Admin</a>
+            </div>
+            <div class="nav-auth">
+                <span class="user-name" id="userName"></span>
+                <button class="btn-logout" id="logoutBtn">Sair</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-sidebar">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h3 id="sidebarUserName"></h3>
+                <p id="sidebarUserEmail"></p>
+            </div>
+            
+            <div class="sidebar-menu">
+                <a href="#" class="active" data-tab="compras">
+                    <i class="fas fa-shopping-bag"></i> Minhas Compras
+                </a>
+                <a href="#" data-tab="downloads">
+                    <i class="fas fa-download"></i> Downloads
+                </a>
+                <a href="#" data-tab="dados">
+                    <i class="fas fa-user"></i> Dados Pessoais
+                </a>
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+            <!-- Aba Compras -->
+            <div class="tab-content active" id="tab-compras">
+                <h2>Minhas Compras</h2>
+                <div class="purchases-list" id="purchasesList">
+                    <!-- Compras serão carregadas via JavaScript -->
+                </div>
+            </div>
+
+            <!-- Aba Downloads -->
+            <div class="tab-content" id="tab-downloads">
+                <h2>Downloads Disponíveis</h2>
+                <div class="downloads-list" id="downloadsList">
+                    <!-- Downloads serão carregados via JavaScript -->
+                </div>
+            </div>
+
+            <!-- Aba Dados Pessoais -->
+            <div class="tab-content" id="tab-dados">
+                <h2>Dados Pessoais</h2>
+                <form id="userDataForm">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input type="text" id="userNome" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="userEmail" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Data de Cadastro</label>
+                        <input type="text" id="userDataCadastro" readonly>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
