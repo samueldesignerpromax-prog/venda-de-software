@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftStore - Loja de Softwares</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Soft<span>Store</span></a>
+            <div class="nav-menu">
+                <a href="/" class="active">Início</a>
+                <a href="#categorias">Categorias</a>
+                <a href="#destaques">Destaques</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <div class="nav-auth" id="navAuth">
+                <!-- Será preenchido via JavaScript -->
+            </div>
+            <button class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Os melhores softwares você encontra aqui!</h1>
+            <p>Antivírus, editores, utilitários e muito mais com os melhores preços</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar software...">
+                <button id="searchBtn"><i class="fas fa-search"></i> Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="categories" id="categorias">
+        <h2>Categorias</h2>
+        <div class="category-grid">
+            <div class="category-card" data-cat="Antivírus">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Antivírus</h3>
+            </div>
+            <div class="category-card" data-cat="Editor">
+                <i class="fas fa-edit"></i>
+                <h3>Editores</h3>
+            </div>
+            <div class="category-card" data-cat="Utilitário">
+                <i class="fas fa-tools"></i>
+                <h3>Utilitários</h3>
+            </div>
+            <div class="category-card" data-cat="Jogo">
+                <i class="fas fa-gamepad"></i>
+                <h3>Jogos</h3>
+            </div>
+            <div class="category-card" data-cat="Desenvolvimento">
+                <i class="fas fa-code"></i>
+                <h3>Dev Tools</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured" id="destaques">
+        <h2>Softwares em Destaque</h2>
+        <div class="software-grid" id="softwareGrid">
+            <!-- Softwares serão carregados via JavaScript -->
+        </div>
+        <div class="pagination" id="pagination">
+            <!-- Paginação via JavaScript -->
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SoftStore</h3>
+                <p>Sua loja online de softwares confiável e segura.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <a href="#">Sobre Nós</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Suporte</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fas fa-envelope"></i> contato@softstore.com</p>
+                <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SoftStore. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
